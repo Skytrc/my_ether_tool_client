@@ -1,10 +1,14 @@
-struct provider {
+use std::collections::HashMap;
+use config::Config;
+
+pub struct Provider {
     https: String,
     websocket: String,
     api_key: String,
 }
 
-enum RPC_Provider {
-    ALCHEMY(provider),
+lazy_static! {
+    pub static ref CONFIG: HashMap<String, Provider> = {
+        
+    };
 }
-
